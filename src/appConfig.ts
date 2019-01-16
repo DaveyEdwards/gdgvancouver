@@ -124,7 +124,8 @@ const appConfig = {
     },
     {
       name: 'Samuel Baruffi',
-      description: 'Hes thinking about it...',
+      description:
+        'Samuel loves technology, he has been in the IT industry for 12+ years with experience in Infrastructure, Networking, and DevOps. For the last 4 years focusing on how to deliver fast quality code using a wide variety of tools and programming languages to apply the DevOps and Agile mindset in different corporations. Samuel is a cloud advocate, a fan of Kubernetes, microservices, serverless and of course GCP.  He loves meeting new people in the community and sharing experiences.',
       img:
         'https://firebasestorage.googleapis.com/v0/b/gdgvancouver-e7a28.appspot.com/o/people%2Fsam.jpg?alt=media&token=24a827e5-3751-4506-baf5-fff5b3a4951e',
       actions: [
@@ -137,6 +138,10 @@ const appConfig = {
           url: 'https://github.com/samuelbaruffi',
         },
         {
+          name: 'Instagram',
+          url: 'https://www.instagram.com/samuelbaruffi/',
+        },
+        {
           name: 'LinkedIn',
           url: 'https://www.linkedin.com/in/samuelbaruffi/',
         },
@@ -147,22 +152,27 @@ const appConfig = {
     {
       title: 'Twitter',
       url: 'https://twitter.com/gdgvancouver',
-      src: '/src/resources/twitter',
+      iconSrc: 'twitter',
     },
     {
       title: 'Instagram',
       url: 'https://www.instagram.com/gdgcloudvancouver/',
-      src: '/src/resources/instagram',
+      iconSrc: 'instagram',
     },
     {
       title: 'LinkedIn',
       url: 'https://www.linkedin.com/company/google-developer-group-vancouver',
-      src: '/src/resources/linkedin',
+      iconSrc: 'linkedin',
+    },
+    {
+      title: 'WTM Twitter',
+      url: 'https://twitter.com/GWTMVancouver',
+      iconSrc: 'twitter',
     },
     {
       title: 'Meetup',
       url: 'https://www.meetup.com/GDGCloudVancouver/',
-      src: '/src/resources/linkedin',
+      iconSrc: 'meetup',
     },
   ],
 };

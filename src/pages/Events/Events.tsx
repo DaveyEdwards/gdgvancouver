@@ -132,10 +132,13 @@ class Events extends React.Component<Props, State> {
                             <a {...props} target="__blank" href={event.link} />
                           )}
                         >
-                          <CardMedia
-                            className={classes.media}
-                            image={event.featured_photo.photo_link}
-                          />
+                          {event.featured_photo &&
+                          event.featured_photo.photo_link ? (
+                            <CardMedia
+                              className={classes.media}
+                              image={event.featured_photo.photo_link}
+                            />
+                          ) : null}
                         </CardActionArea>
                         <CardContent className={classes.cardContent}>
                           <Typography variant="h5" color="textPrimary">

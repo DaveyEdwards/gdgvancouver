@@ -93,9 +93,7 @@ class Progress extends React.Component<Props, State> {
                 variant="contained"
                 color="primary"
                 className={classes.callToAction}
-                component={(props: any) => (
-                  <Link {...props} to={'/upcoming-events'} />
-                )}
+                component={(props: any) => <Link {...props} to={'/events'} />}
               >
                 Upcoming Events
               </Button>

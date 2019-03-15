@@ -25,7 +25,7 @@ const appConfig = {
       type: 'BUTTON',
       icon: 'event',
       title: 'Events',
-      slug: '/upcoming-events',
+      slug: '/events',
     },
     {
       type: 'BUTTON',

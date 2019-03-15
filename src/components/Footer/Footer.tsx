@@ -1,6 +1,7 @@
 import * as React from 'react';
 import appConfig from '../../appConfig';
 import getSvg from '../../resources/getSvg';
+import Spacer from '../Spacer';
 import { Link } from 'react-router-dom';
 import { Theme } from '@material-ui/core/styles';
 import {
@@ -27,7 +28,7 @@ const styles = (theme: Theme) =>
       background: theme.palette.primary.main,
       textAlign: 'center',
       color: 'white',
-      minHeight: 200,
+      minHeight: 600,
     },
     socialIcon: {
       marginRight: theme.spacing.unit,
@@ -72,6 +73,34 @@ class Footer extends React.Component<Props> {
               </Button>
             );
           })}
+          <Spacer />
+          <Typography variant="body1" color="inherit">
+            <i>
+              This site was made by Davey Edwards with
+              create-react-app-typescript, Material UI, React Router, Firebase
+              Hosting and Functions. It is all open source
+            </i>
+          </Typography>
+          <Button
+            variant="text"
+            color="inherit"
+            className={classes.socialButton}
+            target="__blank"
+            component={(props: any) => (
+              <a
+                {...props}
+                href={'https://github.com/DaveyEdwards/gdgvancouver'}
+              />
+            )}
+          >
+            <img
+              className={classes.socialIcon}
+              src={getSvg('github')}
+              height={25}
+              width={25}
+            />
+            GitHub
+          </Button>
         </div>
       </div>
     );

@@ -3,14 +3,14 @@ import appConfig from '../../appConfig';
 import Page from '../../components/Page';
 import Spacer from '../../components/Spacer';
 import {
-  CardActions,
+  Button,
   Card,
+  CardActions,
+  CardContent,
+  CardMedia,
   createStyles,
   Typography,
   withStyles,
-  CardContent,
-  CardMedia,
-  Button,
 } from '@material-ui/core';
 
 interface Props {
@@ -101,6 +101,84 @@ class Progress extends React.Component<Props, State> {
           <Spacer />
 
           {appConfig.organizers.map(person => {
+            return window.innerWidth > 680 ? (
+              <Card key={person.name} className={classes.card}>
+                <div className={classes.cardPrimary}>
+                  <CardMedia
+                    className={classes.cover}
+                    image={person.img}
+                    title={person.name}
+                  />
+                  <div className={classes.details}>
+                    <CardContent>
+                      <Typography variant="h4" color="textPrimary">
+                        <b>{person.name}</b>
+                      </Typography>
+                      <br />
+                      <Typography variant="body1" color="textPrimary">
+                        {person.description}
+                      </Typography>
+                    </CardContent>
+                  </div>
+                </div>
+                <CardActions className={classes.actions}>
+                  {person.actions.map(action => {
+                    return (
+                      <Button
+                        key={action.name}
+                        color="primary"
+                        component={(props: any) => (
+                          <a {...props} target="__blank" href={action.url} />
+                        )}
+                      >
+                        {action.name}
+                      </Button>
+                    );
+                  })}
+                </CardActions>
+              </Card>
+            ) : (
+              <Card style={{ marginBottom: 12 }}>
+                <CardMedia
+                  className={classes.smallCardCover}
+                  image={person.img}
+                  title={person.name}
+                />
+                <CardContent>
+                  <Typography variant="h4" color="textPrimary">
+                    <b>{person.name}</b>
+                  </Typography>
+                  <br />
+                  <Typography variant="body1" color="textPrimary">
+                    {person.description}
+                  </Typography>
+                </CardContent>
+                <CardActions className={classes.actions}>
+                  {person.actions.map(action => {
+                    return (
+                      <Button
+                        key={action.name}
+                        color="primary"
+                        component={(props: any) => (
+                          <a {...props} target="__blank" href={action.url} />
+                        )}
+                      >
+                        {action.name}
+                      </Button>
+                    );
+                  })}
+                </CardActions>
+              </Card>
+            );
+          })}
+
+          <Typography variant="h4" color="textPrimary">
+            <b>And Our Amazing Volunteers:</b>
+          </Typography>
+
+          <Spacer />
+
+          {appConfig.volunteers.map(person => {
             return window.innerWidth > 680 ? (
               <Card key={person.name} className={classes.card}>
                 <div className={classes.cardPrimary}>

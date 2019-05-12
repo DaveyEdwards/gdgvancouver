@@ -6,16 +6,16 @@ import Progress from '../../components/Progress';
 import Spacer from '../../components/Spacer';
 
 import {
-  CardActions,
+  Button,
   Card,
-  createStyles,
-  Typography,
-  withStyles,
+  CardActionArea,
+  CardActions,
   CardContent,
   CardMedia,
-  Button,
+  createStyles,
   Grid,
-  CardActionArea,
+  Typography,
+  withStyles,
 } from '@material-ui/core';
 
 interface Props {
@@ -149,7 +149,9 @@ class Events extends React.Component<Props, State> {
                             Venue:
                           </Typography>
                           <Typography variant="body1" color="textPrimary">
-                            {event.venue.name}
+                            {event.venue && event.venue.name
+                              ? event.venue.name
+                              : 'TBD'}
                           </Typography>
                           <br />
                           <Typography variant="caption" color="textPrimary">

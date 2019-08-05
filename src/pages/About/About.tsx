@@ -67,7 +67,7 @@ const styles = (theme: any) =>
     },
   });
 
-class Progress extends React.Component<Props, State> {
+class About extends React.Component<Props, State> {
   constructor(props: any) {
     super(props);
     this.state = {};
@@ -255,4 +255,4 @@ class Progress extends React.Component<Props, State> {
   }
 }
 
-export default withStyles(styles)(Progress);
+export default withStyles(styles)(About);

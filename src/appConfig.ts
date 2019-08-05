@@ -60,7 +60,7 @@ const appConfig = {
       description:
         'Davey is obsessed with learning and building new things.  His primary focus right now is excelling his ability to build planetary scale applications with Google Cloud Platform, React, Apollo, and GraphQL using TypeScript.  Some other interests include video creation, biohacking, 3d modeling, physically building things, and manufacturing.',
       img:
-        'https://firebasestorage.googleapis.com/v0/b/gdgvancouver-e7a28.appspot.com/o/people%2Fdaveypart2.jpg?alt=media&token=4ceeb18f-d617-4b49-8942-f32590148192',
+        'https://firebasestorage.googleapis.com/v0/b/gdgvancouver-e7a28.appspot.com/o/people%2FUntitled-1%400%2C5x.png?alt=media&token=628d77bf-eed2-4c21-b4d7-81b1c6118dce',
       actions: [
         {
           name: 'Twitter',
@@ -202,6 +202,30 @@ const appConfig = {
       iconSrc: 'meetup',
     },
   ],
+  communityNight: {
+    heroSrc:
+      'https://firebasestorage.googleapis.com/v0/b/gdgvancouver-e7a28.appspot.com/o/images%2FAsset%2040.png?alt=media&token=812b56a9-ff8a-47d7-a43e-936ae67f164e',
+    links: [
+      {
+        title: 'Google Form Check-in',
+        description:
+          'Get the most out of the event by allow other attendees.  Your responses are linked to your Google email so you can edit them and update them at future events without typing everything out again.',
+        url:
+          'https://docs.google.com/forms/d/e/1FAIpQLSejE80YPMB4ql7kmmrEEWMWmk_9cHMZzOdsPnS6GYi7PqiJgw/viewform?usp=sf_link',
+        iconSrc: './gform.png',
+        btnText: 'View Form',
+      },
+      {
+        title: 'People Responses Finder',
+        description:
+          'This is where you will find the people at this event you want to connect with.',
+        url:
+          'https://docs.google.com/spreadsheets/d/13yyQyWzwU7dns3Antq3zf2WhMRbpa5MB3g9cbuCdtP8/edit?usp=sharing',
+        iconSrc: './gsheet.png',
+        btnText: 'View Responses',
+      },
+    ],
+  },
 };
 
 export default appConfig;

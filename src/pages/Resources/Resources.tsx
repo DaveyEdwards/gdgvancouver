@@ -2,14 +2,14 @@ import * as React from 'react';
 import Page from '../../components/Page';
 import Spacer from '../../components/Spacer';
 import {
-  CardActions,
+  Button,
   Card,
+  CardActions,
+  CardContent,
   createStyles,
+  Grid,
   Typography,
   withStyles,
-  CardContent,
-  Button,
-  Grid,
 } from '@material-ui/core';
 
 interface Props {

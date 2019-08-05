@@ -123,7 +123,7 @@ class CommunityNight extends React.Component<Props, State> {
                 </CardActions>
               </Card>
             ) : (
-              <Card style={{ marginBottom: 12 }}>
+              <Card key={link.title} style={{ marginBottom: 12 }}>
                 <CardMedia
                   className={classes.smallCardCover}
                   image={link.iconSrc}
